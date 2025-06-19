@@ -1,65 +1,91 @@
-const yes = document.querySelector("#yes");
-const no = document.querySelector("#no");
-const gif = document.querySelector("#gif");
-const text = document.querySelector("#text");
-const vid = document.querySelector("video");
-let count = 2;
-
-const gifs = [
-  "../resources/cat-heart.gif",
-  "../resources/rusure.gif",
-  "../resources/3shocked-1.gif",
-  "../resources/4.crying.gif",
-  "../resources/5.crying.gif",
-  "../resources/idc.gif"
-];
 
 gifs.forEach(gifSrc => {
   const img = new Image();
   img.src = gifSrc;
 });
 
-no.addEventListener("click", () => {
-  if (count == 2) {
-    gif.src = "../resources/rusure.gif";// gif credit: https://knowyourmeme.com/photos/2738959-mr-fresh-side-eye-cat
-    text.innerHTML = "como assim não caceta?🤨";
-    yes.style.height = "65%";
-    yes.style.width = "60%";
-    no.style.width = "30%";
-    count++;
-  } else if (count == 3) {
-    gif.src = "../resources/3shocked-1.gif";// gif credit: https://tenor.com/view/tkthao219-peach-goma-gif-25008901
-    text.innerHTML = "tá maluco porra clica no sim?🥹";
-    yes.style.height = "70%";
-    yes.style.width = "70%";
-    no.style.width = "20%";
-    count++;
-  } else if (count == 4) {
-    gif.src = "../resources/4.crying.gif";// gif credit: https://tenor.com/view/cat-kitty-gif-25340141
-    text.innerHTML = "Nossa amor😭";
-    yes.style.height = "80%";
-    yes.style.width = "80%";
-    no.style.fontSize = "4vh";
-    no.style.width = "10%";
-    count++;
-  } else if (count == 5) {
-    gif.src = "../resources/5.crying.gif";// gif credit: https://tenor.com/view/cat-gif-10173437195524493032
-    text.innerHTML = "Para de ser ruim🥺😘";
-    yes.style.height = "90%";
-    yes.style.width = "96%";
-    no.style.display = "none";
-  }
-});
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile menu functionality
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-yes.addEventListener("click", () => {
-  vid.style.display = "block";
-  gif.src = "../resources/idc.gif";// gif credit: https://tenor.com/view/peach-cat-kiss-animated-love-mwah-gif-25743978
-  text.innerHTML = "Ara ara Willian Chan 😘";
-  yes.innerHTML = '<a href="https://www.instagram.com/vilalosmuertosdefome_beach/">Vou te levar pra encher o bucho Arriba</a>';
-  yes.style.height = "90%";
-  yes.style.width = "96%";
-  no.style.display = "none";
-  setTimeout(() => {
-    vid.style.display = "none";
-  }, 9000);
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Close menu when window is resized to desktop size
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) { // md breakpoint
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    }
+
+    // Typing animation for terminal
+    const terminalContent = document.querySelector('.typing');
+    if (terminalContent) {
+        const text = terminalContent.textContent;
+        terminalContent.textContent = '';
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                terminalContent.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+
+        setTimeout(typeWriter, 1000);
+    }
+
+    // Set active menu item based on current page
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('nav a').forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
+
+    // Add parallax effect to stars
+    window.addEventListener('scroll', () => {
+        const stars = document.querySelectorAll('.stars, .stars2, .stars3');
+        const scrolled = window.pageYOffset;
+        
+        stars.forEach((star, index) => {
+            const speed = (index + 1) * 0.5;
+            star.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+    });
+
+    // Intersection Observer for fade-in animation
+    const observerOptions = {
+        root: null,
+        threshold: 0.1,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-4');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all project cards
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-700');
+        observer.observe(card);
+    });
 });

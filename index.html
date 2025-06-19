@@ -1,38 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="resources/fav.png">
-    <!-- credit: https://www.iconarchive.com/show/love-is-in-the-web-icons-by-succodesign/heart-icon.html#google_vignette for favicon -->
-    <title>Convite pro meu amorzinho</title>
+    <link rel="icon" href="resources/disquet.png">
+    <title>Vero</title>    <link rel="stylesheet" href="css/particles.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap">
 </head>
-<body>
-    <section>
-        <div class="video-background">
-            <video autoplay loop muted playsinline>
-                <source src="resources/heart.webm" type="video/webm"><!-- web for transparent background video -->
-                <!-- video credit: https://www.vecteezy.com/video/23346640-red-heart-shape-balloon-flying-up-animation-on-green-screen-background-love-balloon-flying-up-animated-chroma-key-video -->
-                Your browser does not support the video tag.
-            </video>
+<body class="bg-black">
+    <div id="particles-js"></div>
+
+    <div class="count-particles">
+        <span class="js-count-particles"></span>
+    </div>
+
+    <header>
+      <nav>
+        <div class="nav-container">
+          <div class="logo">&lt;/&gt;</div>
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="#">Projetos</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
         </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
         <div class="container">
-            <div class="image-box">
-                <div class="actual-image">
-                    <img src="resources/cat-heart.gif" alt="gif" class="gif" id="gif">
-                    <!-- gif credit: https://tenor.com/view/heart-love-cat-kawaii-cute-gif-8446829684698946759 -->
-                </div>
-                <div class="text-one">
-                    <p style="font-size: 1.4rem;text-align: center;" id="text">quer sair comigo?❤️😘</p>
-                </div>
+          <h1 class="cyberpunk-title" data-text="Olá, Mundo!">Verônica Freitas</h1>
+          <p class="subtitle">Desenvolvedora de Software</p>
+          <div class="terminal">
+            <div class="terminal-header">
+              <span class="terminal-button"></span>
+              <span class="terminal-button"></span>
+              <span class="terminal-button"></span>
             </div>
-            <div class="yes-no">
-                <button class="yes" id="yes">Sim</button>
-                <button class="no" id="no">Não</button>
+            <div class="terminal-content">
+             <p><span class="prompt">$</span> whoami</p>
+              <p><a href="https://github.com/verofreitt">@verofreitt</a></p>
+              <p><span class="prompt">$</span> uptime</p>
+              <p>a mais de três anos codando</p>
+              <p><span class="prompt">$</span> cd proj/ && code .</p>
+              <p class="typing">abrindo meu próximo projeto...</p>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
+    </main>    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="js/particles-config.js"></script>
+    <script src="js/particles-stats.js"></script>
     <script src="js/app.js"></script>
-</body>
+  </body>
 </html>

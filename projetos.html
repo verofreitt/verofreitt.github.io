@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="resources/fav.png">
+    <title>Projetos | Portfólio Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/particles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tech-green': '#00ff00',
+                        'dark': '#0a0a0a',
+                        'card-bg': 'rgba(26, 26, 26, 0.8)'
+                    },
+                    fontFamily: {
+                        'fira': ['Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark font-fira text-tech-green min-h-screen">
+    <div id="particles-js" class="fixed inset-0 -z-10"></div>
+    
+    <header class="fixed w-full top-0 z-50 bg-dark/80 backdrop-blur-md border-b border-tech-green/20">
+        <nav class="px-4 py-4 max-w-7xl mx-auto">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold hover:text-white transition-colors">
+                    <a href="index.html">&lt;/&gt;</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-tech-green/10 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Desktop menu -->
+                <ul class="hidden md:flex items-center space-x-8">
+                    <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="sobre.html" class="hover:text-white transition-colors">Sobre</a></li>
+                    <li><a href="#" class="text-white border-b-2 border-tech-green">Projetos</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="flex flex-col space-y-4">
+                    <li><a href="index.html" class="block hover:text-white transition-colors">Home</a></li>
+                    <li><a href="sobre.html" class="block hover:text-white transition-colors">Sobre</a></li>
+                    <li><a href="#" class="block text-white border-b-2 border-tech-green">Projetos</a></li>
+                    <li><a href="#" class="block hover:text-white transition-colors">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-24 min-h-screen">
+        <section class="projects">
+            <div class="container mx-auto px-4 py-8">
+                <h1 class="glitch text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12" data-text="Projetos">Projetos</h1>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto">
+                    <article class="group bg-card-bg border border-tech-green rounded-lg p-4 md:p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-tech-green/20">
+                        <div class="aspect-video rounded overflow-hidden border border-tech-green/20 mb-4">
+                            <img src="https://via.placeholder.com/400x200/0a0a0a/00ff00?text=Projeto+1" 
+                                 alt="Preview do Projeto 1"
+                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xl md:text-2xl">📁</span>
+                            <div class="flex gap-2">
+                                <a href="https://github.com/verofreitt" target="_blank" 
+                                   class="transition-all duration-300 hover:-translate-y-1 hover:text-white p-2 rounded-full hover:bg-tech-green/10">
+                                    <img src="resources/github-mark-white.svg" alt="GitHub" class="w-5 h-5 md:w-6 md:h-6">
+                                </a>
+                                <a href="#" target="_blank" 
+                                   class="transition-all duration-300 hover:-translate-y-1 hover:text-white p-2 rounded-full hover:bg-tech-green/10">
+                                    <svg class="w-5 h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M10 6v2H5v11h11v-5h2v6a1 1 0 01-1 1H4a1 1 0 01-1-1V7a1 1 0 011-1h6zm11-3v8h-2V6.413l-7.293 7.294-1.414-1.414L17.586 5H13V3h8z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="text-lg md:text-xl font-semibold mb-2 group-hover:text-white transition-colors">Projeto 1</h3>
+                        <p class="text-gray-400 mb-4 text-sm md:text-base">Descrição do projeto com detalhes técnicos e tecnologias utilizadas.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-tech-green/10 text-tech-green px-2 py-1 rounded text-xs md:text-sm">JavaScript</span>
+                            <span class="bg-tech-green/10 text-tech-green px-2 py-1 rounded text-xs md:text-sm">React</span>
+                            <span class="bg-tech-green/10 text-tech-green px-2 py-1 rounded text-xs md:text-sm">Node.js</span>
+                        </div>
+                    </article>
+
+                    <article class="bg-opacity-80 bg-gray-900 border border-tech-green rounded-lg p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-tech-green/20">
+                        <div class="aspect-video rounded overflow-hidden border border-tech-green/20 mb-4">
+                            <img src="https://via.placeholder.com/400x200/0a0a0a/00ff00?text=Projeto+2" 
+                                 alt="Preview do Projeto 2"
+                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl">📁</span>
+                            <a href="https://github.com/verofreitt" target="_blank" class="transition-transform hover:-translate-y-1">
+                                <img src="resources/github-mark-white.svg" alt="GitHub" class="w-6 h-6">
+                            </a>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Projeto 2</h3>
+                        <p class="text-gray-400 mb-4">Outro projeto interessante com sua descrição e detalhes de implementação.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-tech-green/10 text-tech-green px-2 py-1 rounded text-sm">Python</span>
+                            <span class="bg-tech-green/10 text-tech-green px-2 py-1 rounded text-sm">Django</span>
+                            <span class="bg-tech-green/10 text-tech-green px-2 py-1 rounded text-sm">PostgreSQL</span>
+                        </div>
+                    </article>
+
+                    <article class="bg-opacity-80 bg-gray-900 border border-tech-green rounded-lg p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-tech-green/20">
+                        <div class="aspect-video rounded overflow-hidden border border-tech-green/20 mb-4">
+                            <img src="https://via.placeholder.com/400x200/0a0a0a/00ff00?text=Projeto+3" 
+                                 alt="Preview do Projeto 3"
+                                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-2xl">📁</span>
+                            <a href="https://github.com/verofreitt" target="_blank" class="transition-transform hover:-translate-y-1">
+                                <img src="resources/github-mark-white.svg" alt="GitHub" class="w-6 h-6">
+                            </a>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Projeto 3</h3>
+                        <p class="text-gray-400 mb-4">Um projeto inovador que demonstra habilidades em desenvolvimento web.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-tech-green/10 text-tech-green px-2 py-1 rounded text-sm">Vue.js</span>
+                            <span class="bg-tech-green/10 text-tech-green px-2 py-1 rounded text-sm">TypeScript</span>
+                            <span class="bg-tech-green/10 text-tech-green px-2 py-1 rounded text-sm">Firebase</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="js/particles-config.js"></script>
+    <script src="js/particles-stats.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
