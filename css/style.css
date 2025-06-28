@@ -77,19 +77,19 @@ header {
 .nav-container {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 0 2rem; /* espaço horizontal extra */
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo-img {
-  width: 60px; /* Diminuí de 70px para 60px */
+  width: 60px; 
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin-left: 1rem; /* Dá um respiro da borda */
+  margin-left: 1rem; 
   transition: transform 0.3s ease;
 }
 
@@ -99,14 +99,14 @@ header {
 
 nav ul {
   display: flex;
-  gap: 2.5rem; /* aumentei o espaçamento */
+  gap: 2.5rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 nav a {
-  font-size: 1.1rem; /* aumentei o tamanho da fonte */
+  font-size: 1.1rem;
   padding: 0.6rem 0;
 }
 
