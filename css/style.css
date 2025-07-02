@@ -13,14 +13,13 @@ body {
 main, section {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;      /* alinha os itens à esquerda */
-    justify-content: flex-start;  /* começa do topo */
-    text-align: left;             /* texto à esquerda */
+    align-items: flex-start;     
+    justify-content: flex-start; 
+    text-align: left;            
 
-    padding-left: 10vw;           /* começa mais pro centro da tela */
-    padding-right: 10vw;          /* opcional: margem direita igual */
-    padding-top: 8vh;            /* distância do topo da tela */
-
+    padding-left: 10vw;          
+    padding-right: 10vw;          
+    padding-top: 8vh;            
     z-index: 1;
 }
 
@@ -44,7 +43,7 @@ a:hover {
 
 .mini-title {
     font-size: 2rem;
-    font-weight: lighter;
+    font-weight: normal;
     color: rgb(105, 157, 199);
 }
 
@@ -57,7 +56,7 @@ a:hover {
 .project-links {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem; /* espaçamento entre os links */
+  gap: 1rem; 
   margin-top: 2rem;
 }
 
@@ -83,10 +82,10 @@ a .prompt {
 
 .social-links {
   display: flex;
-  flex-direction: row;      /* links lado a lado */
-  justify-content: center;  /* centraliza horizontalmente */
-  gap: 2rem;                /* espaçamento entre os links */
-  margin-top: 1rem;         /* aproxima dos projetos */
-  margin-bottom: 4rem;      /* distância do rodapé ou fim da tela */
-  flex-wrap: wrap;          /* permite quebrar linha em telas menores */
+  flex-direction: row;     
+  justify-content: center; 
+  gap: 2rem;               
+  margin-top: 1rem;       
+  margin-bottom: 4rem;     
+  flex-wrap: wrap;          
 }
