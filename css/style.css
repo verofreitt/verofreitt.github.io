@@ -39,13 +39,13 @@ a:hover {
 .title {
     font-size: 3rem;
     font-weight: bold;
-    color: steelblue;
+    color: rgb(134, 177, 212);
 }
 
 .mini-title {
     font-size: 2rem;
     font-weight: lighter;
-    color: steelblue;
+    color: rgb(105, 157, 199);
 }
 
 .subtitle {
