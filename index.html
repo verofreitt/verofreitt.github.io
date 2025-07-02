@@ -7,9 +7,11 @@
     <title>Vero</title>
     <link rel="stylesheet" href="css/particles.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
     />
   </head>
   <body class="bg-black">
@@ -19,48 +21,61 @@
       <span class="js-count-particles"></span>
     </div>
 
-    <header>
-      <nav>
-        <div class="nav-container">
-          <a href="index.html" class="logo">
-            <img src="resources/logo.png" alt="vero logo" class="logo-img" />
-          </a>
-          <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
     <main>
-      <section id="home" class="hero">
-        <div class="container">
-          <h1 class="cyberpunk-title" data-text="Olá, Mundo!">
-            Oi, eu sou a Vero
-          </h1>
-          <p class="subtitle">Desenvolvedora de Software</p>
-          <div class="terminal">
-            <div class="terminal-header">
-              <span class="terminal-button"></span>
-              <span class="terminal-button"></span>
-              <span class="terminal-button"></span>
-            </div>
-            <div class="terminal-content">
-              <p><span class="prompt">$</span> whoami</p>
-              <p><a href="https://github.com/verofreitt">@verofreitt</a></p>
-              <p><span class="prompt">$</span> uptime</p>
-              <p>+3 anos de experiência em desenvolvimento de software</p>
-              <p><span class="prompt">$</span> cd proj/ && code .</p>
-              <p class="typing">abrindo meu próximo projeto...</p>
-            </div>
-          </div>
-          <div class="social-links">
-            <a href="#" target="_blank">Veja meus projetos</a>
-            <a href="#" target="_blank">Leia o que ando explorando</a>
-          </div>
+      <section>
+        <h3 class="title">vero</h3>
+        <p class="subtitle">
+          Brazilian software developer, focused on back-end and passionate about
+          robust, scalable and well-architected systems. Working mainly with Go
+          applications, I write clean and reliable code — and I'm always
+          learning along the way.
+        </p>
+      </section>
+      <section>
+        <h3 class="mini-title">whoiam</h3>
+        <p class="subtitle">
+          I'm a developer who likes to create useful projects (or at least fun
+          to program). I like to keep things simple, even when the stack gets
+          complicated. This is where I gather some of the things I've built —
+          ideas that made me write code out of curiosity, necessity, or pure
+          pleasure. I have experience with critical systems, and I constantly
+          use Go, Python, and automation tools. I like to learn about software
+          architecture, cloud (especially AWS), and performance, but I'm also
+          driven by music, fantasy books, manga, and good board games or PC
+          games. If you want to exchange ideas or learn more about my work, my
+          links are below.
+        </p>
+      </section>
+      <section>
+        <div class="project-links">
+          <h3 class="mini-title">Projects</h3>
+          <span>
+            <a href="https://github.com/verofreitt/golang_microservice_stack"
+              ><span class="prompt">$</span>Go Microservices Stack</a
+            >
+          </span>
+          <span>
+            <a href="https://github.com/verofreitt/go_jwt_auth_gin_gonic"
+              ><span class="prompt">$</span>JWT Authentication in Go with Gin
+              Gonic</a
+            >
+          </span>
+          <span>
+            <a href="https://github.com/verofreitt/devbook"
+              ><span class="prompt">$</span>DevBook</a
+            >
+          </span>
+        </div>
+      </section>
+      <section class="social">
+        <div class="social-links">
+          <a href="https://github.com/verofreitt" target="_blank"
+            >github</a
+          >
+          <a href="https://www.linkedin.com/in/verofreitt" target="_blank"
+            >linkedin</a
+          >
+          <a href="mailto:verofreitt@gmail.com">email</a>
         </div>
       </section>
     </main>
